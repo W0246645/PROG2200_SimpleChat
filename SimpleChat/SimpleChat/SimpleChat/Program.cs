@@ -62,6 +62,41 @@ namespace SimpleChat
             */
 
             // ------------------------ Fourth Phase -------------------------
+            /*
+            while (true)
+            {
+                //1.Run as Client vs Server
+                Console.WriteLine("Listening for messages");
+                if (Console.KeyAvailable)
+                {
+                    //2.User input mode: when user press "I" key.            
+                    var userKey = Console.ReadKey();
+                    if (userKey.Key == ConsoleKey.I)
+                    {
+                        Console.Write("'I' is PRESSED >>"); //insertion mode
+                        Console.Beep();
+                        Thread.Sleep(500);
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\nYou typed {userKey.Key}");
+                        Console.Beep();
+                        Thread.Sleep(500);
+                    }
+                }
+            }
+            */
+
+            // ------------------------ Fifth Phase -------------------------
+            if (args.Contains("-server"))
+            {
+                Console.WriteLine("Server");
+            } else
+            {
+                Console.WriteLine("Client");
+            }
+            
             while (true)
             {
                 //1.Run as Client vs Server
